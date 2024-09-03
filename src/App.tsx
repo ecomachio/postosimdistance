@@ -14,7 +14,8 @@ interface Location {
 }
 
 const App: React.FC = () => {
-  const [userLocation, setUserLocation] = useState<Location | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_userLocation, setUserLocation] = useState<Location | null>(null);
   const [closestLocation, setClosestLocation] = useState<GasStation | null>(
     null
   );
@@ -79,9 +80,9 @@ const App: React.FC = () => {
   }, []);
 
   // Generate Google Maps URL
-  const getGoogleMapsLink = (lat: number, lng: number): string => {
-    return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
-  };
+  // const getGoogleMapsLink = (lat: number, lng: number): string => {
+  //   return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+  // };
   return (
     <div className="min-h-screen flex flex-col items-center justify-center w-full">
       <img
